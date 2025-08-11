@@ -186,7 +186,7 @@ export default function UserInfoForm({ defaultValues = {} }) {
                   required: "Please upload your resume",
                   validate: {
                     isPdf: (fileList) =>
-                      fileList && fileList.length === 1 && fileList[0]?.type === "application/pdf" || "Only one PDF file is allowed",
+                      (fileList && fileList.length === 1 && fileList[0]?.type === "application/pdf") || "Only one PDF file is allowed",
                   },
                 })}
               />
